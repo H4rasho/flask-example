@@ -20,8 +20,8 @@ def getUser(id):
 
 @app.post("/users/")
 def createUser():
-    movie = request.get_json()
-    return create(movie.get("name"), movie.get("email"))
+    user = request.get_json()
+    return create(user.get("name"), user.get("email"))
 
 @app.delete("/users/<id>")
 def deleteUser(id):
@@ -29,6 +29,6 @@ def deleteUser(id):
 
 @app.put("/users")
 def updateUser():
-    movie = request.get_json()
-    return update(movie.get("id"), movie.get("name"), movie.get("email"))
+    user = request.get_json()
+    return update(user.get("id"), user.get("name"), user.get("email"))
 
